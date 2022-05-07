@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a54d2cbf95.js"></script>
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
+    <link rel="stylesheet" media="screen and (max-width:530px)" href="mobile.css">
+    
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">Hi, I AM <br> SYED MUHAMMAD SHOAIB <br> <span class="auto-input"></span></h1>
+            <br>
+            <button class="btn">
+               Download My CV 
+            </button>
+
+        </div>
+
+    </section>
+
+    <section id="about">
+        <h1 class="headings"><b>ABOUT ME</b></h1>
+        <div id="pic"> 
+            <img src="crop-DSC_0573-removebg.jpg" alt="">
+            <div id="intro">
+                <h2>SYED MUHAMMAD SHOAIB</h2>
+                <P>A software engineering student, with an ambition to gain experience 
+                    in the domain of Data Analytics, Data Science, and Software and Web Development. 
+                    Skilled in Python (Programming Language), C#, SQL, Html, CSS, Javascript 
+                    Tableau, Data Visualization, Data processing, Data cleaning, Machine Learning, 
+                    and Data Analytics. A quick learner with the ability to absorb new ideas,ask 
+                    effective questions and solve complex problems by making data-driven decisions 
+                    and lways ready to learn new technologies I have strong leadership skills, 
+                    Communication skills and Presentation skills.   
+                    Currently looking for an internship and job opportunity to improve my skills 
+                    and knowledge to grow along with the organization's objective.
+                    </P>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="portfolio">
+        <h1 class="headings">PORTFOLIO</h1>
+        <div class="gallery">
+            <img src="Emb-Administration.jpg" alt="">
+            <img src="Step-by-Step.jpg" alt="">
+            <img src="Vang-Quality.jpg" alt="">
+            <img src="Counsel-Maassluis.jpg" alt="">
+            <img src="Jayley-Cosmetics.jpg" alt="">
+            <img src="tran-mau-tri-tam-h7v_38e3iGE-unsplash.jpg" alt="">
+        </div>
+
+
+    </section>
+
+    <Section id="contact">
+        <h1 class="headings">CONTACT ME</h1>
+        <div class="container">
+            <form method="post">
+              <i class="fas fa-paper-plane"></i>
+        
+              <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validatename()">
+                <span id="name-error"></span>
+              </div>
+        
+              <div class="input-group">
+                <label>Phone No.</label>
+                <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatephone()">
+                <span id="phone-error"></span>
+              </div>
+        
+              <div class="input-group">
+                <label>Email Id</label>
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateemail()">
+                <span id="email-error"></span>
+              </div>   
+        
+              <div class="input-group">
+                <label>Your Message</label>
+                <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validatemessage()"></textarea>
+                <span id="message-error"></span>
+              </div>
+        
+              <button onclick="return validateform()">Submit</button>
+              <span id="submit-error"></span>
+           
+            </form>
+        </div>
+
+    </Section>
+
+    <!-- Bootstrap Footer -->
+    <footer>
+        <div class="container" style="padding: 5px 0;" align="center">
+            <a href="https://www.facebook.com/">
+                <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x icon"></i>
+            </a>
+            <a href="https://twitter.com/shoaib_shah15">
+                    <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x icon"></i>
+                </a>
+                <a href="https://www.google.com/account/about/">
+                        <i class="fa fa-google-plus fa-lg white-text mr-md-5 mr-3 fa-2x icon"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/syed-muhammad-shoaib-71028b224/">
+                            <i class="fa fa-linkedin fa-lg white-text mr-md-5 mr-3 fa-2x icon"></i>
+                        </a>
+                        <a href="https://www.instagram.com/">
+                                <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x icon"></i>
+                            </a>
+                            <a href="https://github.com/Shah-1510">
+                                    <i class="fa fa-github fa-lg white-text icon"></i>
+                                </a>
+        </div>
+        <div style="background: #000;">
+            <p style="color: #91BEC2; padding: 15px 0;" align="center">
+                &copy; 2022 Copyright: <a href="mailto:webcodian@gmail.com">Created By: SYED M SHOAIB</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scroll to top -->
+   <a href="#" class="to-top">
+       <i class="fas fa-chevron-up"></i>
+   </a>
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="app.js"> </script>
+        
+
+</body>
+</html>

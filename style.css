@@ -1,0 +1,296 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth; /* Allows a smooth animated "scroll effect" between elements within the scrolling box. */
+}
+
+/* navbar css*/
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: sticky; /* An element with position: sticky; is positioned based on the user's scroll position. */
+    top: 0;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+}
+/* em (is me font ya content relativly change hoga hai baqi content ke size ke hisab se 
+   rem (is me wo content fix hojata hai aur koi farq nai parta usey content ka size change hone se)*/
+.navbar ul li{
+    font-family: century;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+}
+.navbar ul li a{
+    text-decoration: none; /* In this it removes all the docration from text like underline, color */
+    color: white;
+    padding: 9px 25px;
+    transition: all .5s ease; /* specifies a transition effect with the same speed from start to end */
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 10px white;
+}
+
+/* Home Section */
+#home{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 840px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+/* before (content se pehle exist karta hai isme image ke above se styling horahi hai aur ye content ke baghair use nai hosakta 
+idhar humne strings li hain kiyunke hamare pass image hai */
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url('akshar-dave-BcvPlibJyo0-unsplash.jpg') no-repeat center center/cover;
+    height: 900px;
+    width: 100%;
+    z-index: -1; /*It is relative/depends on position (it is z axis) (sets the z-order of a positioned element and its descendants 
+                                    or flex items. Overlapping elements with a larger z-index cover those with a smaller one.) */
+    opacity: .8;
+}
+.main{
+    display: flex;
+    flex-direction: column; /* The flexible items are displayed vertically, as a column */
+    align-items: center;
+    position: absolute; /* The element is positioned relative to its first positioned (not static) ancestor element */
+    top: 30%;  
+}
+.headings{
+    font-family: century;
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 30px  0px;
+}
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    outline: none;
+    transition: 0.6s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white,0 0 15px white; /* Defining multiple shadows */
+    font-weight: bold;
+}
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box; /* The width and height properties & min/max properties includes content, padding and border */
+    padding: 20px;
+    margin-bottom: 50px;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+    width: 575px;
+    height: 400px;
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+#intro p{
+    font-size: 20px;
+}
+#about h1{
+    font-size: 32px;
+}
+
+/* Portfolio Section*/
+#portfolio{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-sizing: border-box; 
+}
+.gallery img{
+    width: 360px;
+    height: 240px;
+    margin: 10px;
+}
+.gallery img:hover{
+    transform: scale(1.5);
+}
+
+/* Contact Section*/
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: black;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#contact h1{
+    color: white;
+}
+.container form{
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 55px 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+.fa-paper-plane{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    font-size: 26px;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+}
+.input-group label{
+    flex-basis: 28%;
+}
+.input-group input, .input-group textarea{
+    flex-basis: 68%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #999;
+    color: #333;
+    font-size: 16px;
+}
+::placeholder{
+    font-size: 14px;
+}
+
+form button{
+    background: #141a34;
+    color: #fff;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 10px 40px;
+    outline: 0;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto 10px;
+}
+.input-group span{
+    position: absolute;
+    bottom: 12px;
+    right: -45px;
+    font: 14px;
+    color: red;
+}
+.input-group span i{
+    color: seagreen;
+}
+#submit-error{
+    color: red;
+}
+
+/* Scroll to Top */
+.to-top{
+    background-color: white;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: #1f1f1f;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+.to-top.active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
+}
+.to-top:hover{
+    background-color: black;
+    color: white;
+}
+
+/* footer */
+footer{
+    background:  rgba(0, 0, 0, 0.9);
+}
+
+footer a:link{
+    color: #fff;
+    text-decoration: none;
+}
+footer a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+footer a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+footer a:active{
+    color: #fff;
+    text-decoration: none;
+}
+footer .icon{
+    margin: 20px;
+    font-size: 24px;
+    box-shadow: 0 2px 2px red;
+}
+footer .icon:hover{
+    transform: translate(0, -8px);
+
+}
